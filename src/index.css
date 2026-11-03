@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'DM Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: #FAF3E8;
+    color: #292929;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-heading {
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: -0.01em;
+  }
+}
+
+/* Modern Glass & Surface Utilities */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.glass-panel-dark {
+  background: rgba(23, 43, 67, 0.9);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-panel-cream {
+  background: rgba(255, 244, 227, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(242, 184, 75, 0.2);
+}
+
+/* Subtle Modern Accents (Contemporary American Diner) */
+.subtle-checker-strip {
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(23, 43, 67, 0.08) 0,
+    rgba(23, 43, 67, 0.08) 8px,
+    transparent 8px,
+    transparent 16px
+  );
+}
+
+/* Modern Pill Badges */
+.modern-badge {
+  font-family: 'Barlow Condensed', sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* Refined Image Hover & Elevation */
+.image-zoom {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.image-zoom:hover {
+  transform: scale(1.04);
+}
+
+/* Modern Smooth Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF3E8;
+}
+::-webkit-scrollbar-thumb {
+  background: #C5BAA8;
+  border-radius: 9999px;
+  border: 2px solid #FAF3E8;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C83B32;
+}
+
+/* Animation utilities */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
